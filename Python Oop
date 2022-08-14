@@ -1,0 +1,25 @@
+class Mobile:
+
+    def __init__(self,brand,model,colour,launchdate,price):
+        self.brand=brand
+        self.model=model
+        self.colour=colour
+        self.launchdate=launchdate
+        self.price=price
+
+    def details(self):
+        det=f"Name : {self.brand}\nModel : {self.model}\nColour : {self.colour}\nlaunchdate : {self.launchdate}\nprice : {self.price}"
+        return det
+
+    def age(self):
+        current_year = 2022
+        return current_year -self.launchdate
+
+mob1=Mobile("Apple","iPhone XR","Gold",2016, 40000)
+mob2=Mobile("Nokia","C7","Black",2010,5990)
+
+print(mob1.details())
+print("Age:",mob1.age())
+print(" ")
+print(mob2.details())
+print("Age:",mob2.age())
